@@ -55,6 +55,20 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.css/,
+        use: [
+          {
+            loader: 'my-style-loader',
+          },
+          {
+            loader: 'my-css-loader',
+            options: {
+              module: true
+            }
+          }
+        ]
       }
     ],
   },

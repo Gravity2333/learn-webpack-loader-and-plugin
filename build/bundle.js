@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\n//@ts-ignore\n// import DefaultDashboard from \"templates/index.bi\";\n//@ts-ignore\nvar stuInfo_template_1 = __webpack_require__(/*! templates/stuInfo.template */ \"./templates/stuInfo.template\");\n//@ts-ignore\nvar webpack_png_1 = __webpack_require__(/*! ./assets/webpack.png */ \"./src/assets/webpack.png\");\nvar add = function (x, y) { return x + y; };\n// console.log(add(100, 220), DefaultDashboard, StuTemplate);\nvar body = document.querySelector(\"body\");\nbody.innerHTML = (0, stuInfo_template_1.default)({\n    name: \"bill\",\n    age: 18,\n    desc: \"a student\",\n    score: 100,\n});\nvar img = document.createElement(\"img\");\nimg.src = webpack_png_1.default;\nbody.appendChild(img);\nconsole.log(webpack_png_1.default);\n\n\n//# sourceURL=webpack://learnplugin/./src/index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\n//@ts-ignore\n// import DefaultDashboard from \"templates/index.bi\";\n//@ts-ignore\nvar stuInfo_template_1 = __webpack_require__(/*! templates/stuInfo.template */ \"./templates/stuInfo.template\");\n//@ts-ignore\nvar webpack_png_1 = __webpack_require__(/*! ./assets/webpack.png */ \"./src/assets/webpack.png\");\n//@ts-ignore\nvar index_css_1 = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\nvar add = function (x, y) { return x + y; };\n// console.log(add(100, 220), DefaultDashboard, StuTemplate);\nvar body = document.querySelector(\"body\");\nbody.className = index_css_1.default.body;\nbody.innerHTML = (0, stuInfo_template_1.default)({\n    name: \"bill\",\n    age: 18,\n    desc: \"a student\",\n    score: 100,\n});\nvar title = document.createElement('div');\ntitle.className = index_css_1.default.title;\ntitle.textContent = 'TEST CSS LOADER ';\nbody.appendChild(title);\nvar img = document.createElement(\"img\");\nimg.src = webpack_png_1.default;\nbody.appendChild(img);\nconsole.log(webpack_png_1.default);\n\n\n//# sourceURL=webpack://learn-webpack-loaders-and-plugin/./src/index.ts?");
 
 /***/ }),
 
@@ -26,7 +26,17 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\n//@t
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"/assets/8c684177.png\");\n\n//# sourceURL=webpack://learnplugin/./src/assets/webpack.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"/assets/8c684177.png\");\n\n//# sourceURL=webpack://learn-webpack-loaders-and-plugin/./src/assets/webpack.png?");
+
+/***/ }),
+
+/***/ "./src/index.css":
+/*!***********************!*\
+  !*** ./src/index.css ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\n    var style = document.createElement('style');\n    style.innerHTML = `.body{\n    height: 100%;\n    background-color: lightblue;\n}\n\n.title{\n    color: lightgoldenrodyellow;\n    line-height: 30px;\n}`;\n    document.head.appendChild(style);\n    /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"body\":\"fbb66eb6-1d3e-44b7-a3d3-505334d2f1b2-body\",\"title\":\"42eb4544-5d17-48d7-838d-031c6adfba52-title\"});\n\n//# sourceURL=webpack://learn-webpack-loaders-and-plugin/./src/index.css?");
 
 /***/ }),
 
@@ -36,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((props)=>{\n          function matchProps(template,props){\n  return template.replace(/{{(.*?)}}/g,(node,key)=>{\n    return props[key]\n  })\n}\n          console.log(\"matchTemplate\")\n          return matchProps(`<div><h2>姓名:{{name}}</h2><h2>年龄:{{age}}</h2><h3>描述:{{desc}}</h3><h3style=\"color:red\">分数:{{score}}</h3></div>`,props)\n      });\n\n//# sourceURL=webpack://learnplugin/./templates/stuInfo.template?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((props)=>{\n          function matchProps(template,props){\n  return template.replace(/{{(.*?)}}/g,(node,key)=>{\n    return props[key]\n  })\n}\n          console.log(\"matchTemplate\")\n          return matchProps(`<div><h2>姓名:{{name}}</h2><h2>年龄:{{age}}</h2><h3>描述:{{desc}}</h3><h3style=\"color:red\">分数:{{score}}</h3></div>`,props)\n      });\n\n//# sourceURL=webpack://learn-webpack-loaders-and-plugin/./templates/stuInfo.template?");
 
 /***/ })
 
