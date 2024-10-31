@@ -1,0 +1,6 @@
+<div>
+    <h2>姓名: {{name}}</h2>
+    <h2>年龄: {{age}}</h2>
+    <h3> 描述: {{desc}}</h3>
+    <h3 style="color:red">分数: {{score}}</h3>
+</div>
